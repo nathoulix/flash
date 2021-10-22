@@ -1,5 +1,5 @@
-basic.forever(function on_forever() {
-    pins.digitalWritePin(DigitalPin.P1, 1)
+def on_forever():
+    pins.digital_write_pin(DigitalPin.P1, 1)
     led.plot(0, 4)
     led.plot(1, 3)
     led.plot(2, 2)
@@ -9,7 +9,7 @@ basic.forever(function on_forever() {
     led.plot(3, 2)
     led.plot(3, 3)
     basic.pause(300)
-    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digital_write_pin(DigitalPin.P1, 0)
     led.unplot(0, 4)
     led.unplot(1, 3)
     led.unplot(2, 2)
@@ -19,4 +19,4 @@ basic.forever(function on_forever() {
     led.unplot(3, 2)
     led.unplot(3, 3)
     basic.pause(700)
-})
+basic.forever(on_forever)
